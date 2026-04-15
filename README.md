@@ -1,60 +1,89 @@
-🔐 Hidden Deep Into My Heart - Writeup
+# 🔐 Hidden Deep Into My Heart — Writeup
 
-Write-up do desafio da plataforma TryHackMe focado em enumeração web e análise de informações expostas.
+> A detailed write-up of a TryHackMe challenge, focusing on web enumeration, analysis of exposed files, and credential exploitation.
+---
 
-📌 Informações do Desafio
-Plataforma: TryHackMe
-Nome: Hidden Deep Into My Heart
-Categoria: Web
-Dificuldade: Easy/Medium
-Objetivo: Obter a flag explorando a aplicação web
-🧠 Metodologia
+## 📌 Overview
 
-A abordagem utilizada seguiu uma metodologia clássica de pentest:
+- **Platform:** TryHackMe  
+- **Challenge:** Hidden Deep Into My Heart  
+- **Category:** Web Security  
+- **Difficulty:** Easy / Medium  
+- **Objective:** Identify vulnerabilities and retrieve the flag  
 
-Reconhecimento
-Enumeração
-Análise de arquivos expostos
-Descoberta de credenciais
-Exploração e obtenção da flag
-🌐 Reconhecimento
+---
 
-Após conectar à VPN da plataforma, foi possível acessar o alvo através do endereço IP fornecido.
+## 🧠 Methodology
 
-🔍 Enumeração
+A structured approach was used to solve the challenge:
 
-Foi utilizada a ferramenta gobuster para realizar brute force de diretórios e arquivos:
+1. Reconnaissance  
+2. Directory and file enumeration  
+3. Analysis of exposed resources  
+4. Credential discovery  
+5. Authentication and flag retrieval  
 
+---
+
+## 🌐 Reconnaissance
+
+After connecting to the TryHackMe VPN, the target machine became accessible via a private IP address (`10.x.x.x`) and a specific port.
+
+Initial access was performed through a web browser.
+
+---
+
+## 🔍 Enumeration
+
+Directory and file brute-forcing was performed using `gobuster`:
+
+```bash
 gobuster dir -u http://IP:PORT/ \
 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt \
--x txt,bak,zip
-📄 Descoberta do robots.txt
+-x txt,bak,zip 
+``` 
+The use of file extensions (`-x`) enabled the discovery of hidden files in addition to directories.
 
-Durante a enumeração, foi identificado o arquivo:
+---
 
+## 📄 robots.txt Analysis
+
+During enumeration, the following file was discovered:
+```bash
 /robots.txt
+```
 
-Este arquivo continha informações sensíveis que foram utilizadas posteriormente como credenciais.
+Although typically used to guide search engine crawlers, this file contained sensitive information.
 
-📂 Descoberta do Painel Administrativo
+The content revealed a string that was later used as a valid password.
 
-Uma nova enumeração revelou o diretório:
+---
 
+## 📂 Administrative Panel Discovery
+
+Further enumeration revealed an administrative endpoint:
+```bash
 /administrator
+```
 
-Ao acessá-lo, foi apresentada uma página de login.
+Accessing this endpoint presented a login interface.
 
-🔐 Exploração
+---
 
-Utilizando as informações obtidas:
+## 🔐 Exploitation
 
-Usuário: admin
-Senha: encontrada no robots.txt
+Using previously gathered information:
 
-Foi possível realizar login com sucesso.
+- **Username:** `admin`  
+- **Password:** extracted from `robots.txt`  
 
-🏁 Flag
+Authentication was successful, granting access to the application.
 
-Após a autenticação, o sistema redirecionou diretamente para a página contendo a flag.
+---
 
-⚠️ Flag omitida para evitar spoilers.
+## 🏁 Flag Retrieval
+
+Upon successful login, the application redirected directly to a page containing the flag.
+
+> ⚠️ The flag has been omitted to avoid spoilers.
+
