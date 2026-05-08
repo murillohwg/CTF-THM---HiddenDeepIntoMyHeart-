@@ -1,7 +1,5 @@
 # Hidden Deep Into My Heart — Writeup
 
-![HOMEPAGE](./images/home-page.png) 
-
 > A detailed write-up of a TryHackMe challenge, focusing on web enumeration, analysis of exposed files, and credential exploitation.
 ---
 
@@ -30,6 +28,9 @@ A structured approach was used to solve the challenge:
 ## Reconnaissance
 
 After connecting to the TryHackMe VPN, the target machine became accessible via a private IP address (`10.x.x.x`) and a specific port.
+
+![HOMEPAGE](./images/home-page.png) 
+
 
 Initial access was performed through a web browser.
 
