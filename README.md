@@ -50,7 +50,7 @@ The use of file extensions (`-x`) enabled the discovery of hidden files in addit
 
 ---
 
-## robots.txt Analysis
+## Analysis of robots.txt
 
 During enumeration, the following file was discovered:
 
