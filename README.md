@@ -39,7 +39,7 @@ Initial access was performed through a web browser.
 
 Directory and file brute-forcing was performed using `gobuster`:
 
-![gobuster](./docs/gobuster-wordlist.png) 
+![gobuster](./images/gobuster-wordlist.png) 
 
 ```bash
 gobuster dir -u http://10.67.184.5:5000/ \
@@ -54,7 +54,7 @@ The use of file extensions (`-x`) enabled the discovery of hidden files in addit
 
 During enumeration, the following file was discovered:
 
-![robotstxt](./docs/robotstxt-dir.png) 
+![robotstxt](./images/robotstxt-dir.png) 
 
 ```bash
 /robots.txt
@@ -70,9 +70,9 @@ The content revealed a string that was later used as a valid password.
 
 Further enumeration revealed an administrative endpoint:
 
-![loginpage](./docs/login-page.png) 
+![loginpage](./images/login-page.png) 
 
-![tryinglogin](./docs/trying-login-page.png) 
+![tryinglogin](./images/trying-login-page.png) 
 
 ```bash
 /administrator
@@ -87,7 +87,7 @@ Accessing this endpoint presented a login interface.
 
 Using previously gathered information:
 
-![tryinglogin](./docs/trying-login-page.png) 
+![tryinglogin](./images/trying-login-page.png) 
 
 - **Username:** `admin`  
 - **Password:** extracted from `robots.txt`  
@@ -100,7 +100,7 @@ Authentication was successful, granting access to the application.
 
 Upon successful login, the application redirected directly to a page containing the flag.
 
-![flag](./docs/flag.png) 
+![flag](./images/flag.png) 
 
 >  The flag has been omitted to avoid spoilers.
 
