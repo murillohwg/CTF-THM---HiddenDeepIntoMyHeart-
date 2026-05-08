@@ -27,7 +27,7 @@ A structured approach was used to solve the challenge:
 
 ## Reconnaissance
 
-After connecting to the TryHackMe VPN, the target machine became accessible via a private IP address (`10.x.x.x`) and a specific port.
+After connecting to the TryHackMe VPN, the target machine became accessible via a private IP address (`10.67.184.5`) and a specific port.
 
 ![HOMEPAGE](./images/home-page.png) 
 
