@@ -75,8 +75,6 @@ Further enumeration revealed an administrative endpoint:
 
 ![loginpage](./images/login-page.png) 
 
-![tryinglogin](./images/trying-login-page.png) 
-
 ```bash
 /administrator
 ```
