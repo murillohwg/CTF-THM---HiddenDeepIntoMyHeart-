@@ -1,5 +1,7 @@
 # 🔐 Hidden Deep Into My Heart — Writeup
 
+![HOMEPAGE](./images/home-page.png) 
+
 > A detailed write-up of a TryHackMe challenge, focusing on web enumeration, analysis of exposed files, and credential exploitation.
 ---
 
