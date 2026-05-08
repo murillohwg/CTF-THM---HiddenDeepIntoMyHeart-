@@ -1,11 +1,11 @@
-# 🔐 Hidden Deep Into My Heart — Writeup
+# Hidden Deep Into My Heart — Writeup
 
 ![HOMEPAGE](./images/home-page.png) 
 
 > A detailed write-up of a TryHackMe challenge, focusing on web enumeration, analysis of exposed files, and credential exploitation.
 ---
 
-## 📌 Overview
+##  Overview
 
 - **Platform:** TryHackMe  
 - **Challenge:** Hidden Deep Into My Heart  
@@ -15,7 +15,7 @@
 
 ---
 
-## 🧠 Methodology
+## Methodology
 
 A structured approach was used to solve the challenge:
 
@@ -27,7 +27,7 @@ A structured approach was used to solve the challenge:
 
 ---
 
-## 🌐 Reconnaissance
+## Reconnaissance
 
 After connecting to the TryHackMe VPN, the target machine became accessible via a private IP address (`10.x.x.x`) and a specific port.
 
@@ -35,7 +35,7 @@ Initial access was performed through a web browser.
 
 ---
 
-## 🔍 Enumeration
+## Enumeration
 
 Directory and file brute-forcing was performed using `gobuster`:
 
@@ -48,7 +48,7 @@ The use of file extensions (`-x`) enabled the discovery of hidden files in addit
 
 ---
 
-## 📄 robots.txt Analysis
+## robots.txt Analysis
 
 During enumeration, the following file was discovered:
 ```bash
@@ -61,7 +61,7 @@ The content revealed a string that was later used as a valid password.
 
 ---
 
-## 📂 Administrative Panel Discovery
+## Administrative Panel Discovery
 
 Further enumeration revealed an administrative endpoint:
 ```bash
@@ -72,7 +72,7 @@ Accessing this endpoint presented a login interface.
 
 ---
 
-## 🔐 Exploitation
+##  Exploitation
 
 Using previously gathered information:
 
@@ -83,9 +83,9 @@ Authentication was successful, granting access to the application.
 
 ---
 
-## 🏁 Flag Retrieval
+##  Flag Retrieval
 
 Upon successful login, the application redirected directly to a page containing the flag.
 
-> ⚠️ The flag has been omitted to avoid spoilers.
+>  The flag has been omitted to avoid spoilers.
 
